@@ -1,0 +1,21 @@
+.background {
+    width: 100%;
+    height: 100%;
+    background-image: url('C:\Users\mlomboy\Desktop\PokeDex\src\assets\img\PokemonBackground.jpg');
+    position: absolute; 
+    top: 0; 
+    left: 0;
+    background-size: 75%;
+}
+
+#pokedexLogo {
+    width: 450px;
+    height: 250px;
+    background-image: url('C:\Users\mlomboy\Desktop\PokeDex\src\assets\img\PokeDexLogo.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: -100px;
+    background-position-y: 20px;
+  }
+
+  

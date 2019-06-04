@@ -1,0 +1,37 @@
+.active-cyan-2 input[type=search]:focus:not([readonly]) {
+    border-bottom: 1px solid #4dd0e1;
+    box-shadow: 0 1px 0 0 #4dd0e1;
+    display: table-cell;
+    }
+    
+.active-cyan input[type=search] {
+    border-bottom: 1px solid #4dd0e1;
+    box-shadow: 0 1px 0 0 #4dd0e1;
+    display: table-cell;
+    }
+#pokeSearch{    
+    width: 150px;
+    height: 10px;
+    background-position-x: 80px;
+    display: table-cell;
+    background-image: url('C:\Users\mlomboy\Desktop\PokeDex\src\assets\img\SearchLogo.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    }
+.wrapper1{
+    width: 100%;
+    display: table;
+    position: fixed;
+    top: 17%;
+    left: 30%;
+    margin-top: -50px;
+    margin-left: -100px;
+}
+
+.wrapper2{
+    display: table-row;
+}
+
+.form-control{
+    width: 500px;
+}
