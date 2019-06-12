@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Pokemon} from '../Pokemon';
+import { PokemonService } from '../pokemon.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  pokemon: Pokemon[] = [];
+  private _detailRegex = /^http:\/\/pokeapi.co\/api\/v2\/pokemon\/(\d+)\/$/;
 
-  ngOnInit() {
-  }
-
+  constructor(private pokemonService: PokemonService) { }
+ngOnInit(){
+  this.getPokemons();
 }
+
+getPokemons(): void {
+  this.pokemonService.getPokemons()
+    .subscribe( data => this.pokemon = data);
+ }
+}
+

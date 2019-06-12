@@ -4,8 +4,15 @@
 <div class="wrapper2">
   <div id="pokeSearch"></div>
   <div class="md-form active-cyan-2 mb-3">
-    <input class="form-control" type="search" placeholder="Pokemon name or id" mdbInput>
+    <input class="form-control" type="search" placeholder="Pokemon name or id" (input)="search(term)" />
   </div>
 </div>
+<ul class>
+  <li *ngFor="let pokemon of pokemons$ | async" >
+    <a routerLink="/detail/{{pokemon.id}}">
+      {{pokemon.name}}
+    </a>
+  </li>
+</ul>
 
 </div>
