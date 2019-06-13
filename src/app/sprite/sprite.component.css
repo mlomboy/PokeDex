@@ -1,0 +1,30 @@
+h4 {
+    position: relative;
+    text-transform: capitalize;
+    padding: 0;
+    float: left;
+  }
+img {
+    margin-top: 0px;
+    padding: 0px;
+    float: left;
+    height: 70px;
+}
+
+/* .parent, .child1, .child2 {
+    width: 100px;
+    height: 100px;
+    border: 1px solid red;
+    margin-right: 10px;
+    float: left;
+  }
+
+  .child1 {
+    
+        width: 100px;
+        height: 100px;
+        border: 1px solid red;
+        margin-right: 10px;
+        float: left;
+      }
+   */

@@ -9,6 +9,7 @@ import { MatGridListModule} from '@angular/material/grid-list';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { PokemonDetailComponent } from './pokemon-detail/pokemon-detail.component';
+import { SpriteComponent } from './sprite/sprite.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { PokemonDetailComponent } from './pokemon-detail/pokemon-detail.componen
     PokemonSearchComponent,
     DashboardComponent,
     PokemonDetailComponent,
+    SpriteComponent,
   ],
   imports: [
     BrowserModule,

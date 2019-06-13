@@ -22,6 +22,8 @@ export class PokemonService {
     private messageService: MessageService ) { }
 
   private pokeUrl = 'https://pokeapi.co/api/v2/pokemon/';
+
+  private index : number;
   
   getPokemons(): Observable<Pokemon[]> {
     return this.http.get<Pokemon[]>(this.pokeUrl+'?offset=0&limit=20')
@@ -29,6 +31,11 @@ export class PokemonService {
         tap(_ => this.log('fetched heroes')),
         catchError(this.handleError<Pokemon[]>('getPokemon', []))
       );  
+  }
+
+  getSprite(name : string): Observable<Pokemon> {
+    console.log(this.http.get<Pokemon>(this.pokeUrl+name));
+    return this.http.get<Pokemon>(this.pokeUrl+name);
   }
     /**
  * Handle Http operation that failed.

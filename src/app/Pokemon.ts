@@ -2,6 +2,9 @@ export interface Pokemon {
     
     id: number;
     name: string;
-    sprite: string;
-  
+    sprites: Sprite;
   }
+
+export interface Sprite {
+  front_default : string;
+}

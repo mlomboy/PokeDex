@@ -55,12 +55,13 @@ body, html {
     width: 19%;
   }
   .module {
-    padding: 20px;
+    height: 110px;
+    padding: 10px;
     text-align: center;
-    color: #eee;
+    color: darkblue;
     max-height: 120px;
     min-width: 120px;
-    background-color: #607d8b;
+    background-color: rgba(135, 206, 235, 0.7);
     border-radius: 2px;
   }
   .module:hover {
