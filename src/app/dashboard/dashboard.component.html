@@ -2,12 +2,13 @@
   <div id="pokedexLogo"></div>
   <div class="grid grid-pad">
     <a *ngFor="let item of pokemon.results" class="col-1-4"
-        routerLink="/detail/{{pokemon.id}}">
+        routerLink="/pokemon-detail/{{item.name}}">
       <div class="module hero">
         <app-sprite [pokeUrl] = 'item.name'>
         </app-sprite>
       </div>
     </a>
+  
   </div>
 </div>
 
