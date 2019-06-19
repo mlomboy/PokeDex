@@ -23,6 +23,5 @@ getPokemons(): void {
   this.pokemonService.getPokemons()
     .subscribe( data => this.pokemon = data);
  }
-
 }
 

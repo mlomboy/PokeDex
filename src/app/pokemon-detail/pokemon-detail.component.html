@@ -1,10 +1,21 @@
+<div class="background">
+  <div id="pokedexLogo"></div>
+
 <div *ngIf="pokemon">
-  <h2>{{pokemon.name | uppercase}} Details</h2>
-  <div><span>id: </span>{{pokemon.id}}</div>
-  <div>
-    <label>name:
-      <input [(ngModel)]="pokemon.name" placeholder="name"/>
-    </label>
-  </div>
-  <button (click)="goBack()">go back</button>
+    <div class="module hero">
+      <img [src]='pokemon.sprites.front_default'>
+      <h2><span>#</span>{{pokemon.id}}  
+      {{pokemon.name | uppercase}}</h2>
+      <div>
+        <ng-container *ngFor = 'let pokeType of pokemon.types.reverse()'>
+          <span class = 'typeBorder {{pokeType.type.name}}'>{{pokeType.type.name}}</span>
+        </ng-container>
+      </div>
+      <!-- <app-sprite [pokeUrl] = 'pokemon.name'>
+        </app-sprite> -->
+
+    </div>
+
+
+</div>
 </div>

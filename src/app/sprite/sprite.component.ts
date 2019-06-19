@@ -13,6 +13,7 @@ export class SpriteComponent implements OnInit {
 
   constructor(private pokemonService: PokemonService) { }
   pokemonSprite : Sprite;
+  
   ngOnInit() {
     this.pokemonService.getSprite(this.pokemonUrl)
     .subscribe(data => {

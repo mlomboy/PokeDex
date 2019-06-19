@@ -71,11 +71,12 @@ export class PokemonService {
         );
       }
 
-      getPokemon(id: number): Observable<Pokemon> {
-        const url = `${this.pokeUrl}/${id}`;
+      getPokemon(name: string): Observable<Pokemon> {
+        
+        const url = `${this.pokeUrl}${name}`;
         return this.http.get<Pokemon>(url).pipe(
-          tap(_ => this.log(`fetched hero id=${id}`)),
-          catchError(this.handleError<Pokemon>(`getHero id=${id}`))
+          tap(_ => this.log(`fetched hero id=${name}`)),
+          catchError(this.handleError<Pokemon>(`getHero id=${name}`))
         );
       }
 }
