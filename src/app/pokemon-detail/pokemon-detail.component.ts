@@ -24,16 +24,19 @@ export class PokemonDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.getPokemon();
+    // this.getPokemonSpecies();
   }
 
   getPokemon(): void {
     const id = this.route.snapshot.paramMap.get('name');
-    console.log(this.route.snapshot.paramMap.get('name')); 
     this.pokemonService.getPokemon(id)
       .subscribe(pokemon => this.pokemon = pokemon);
-      
   }
-
+  getPokemonSpecies(): void {
+    const id = this.route.snapshot.paramMap.get('name');
+    this.pokemonService.getPokemonSpecies(id)
+      .subscribe(pokemon => this.pokemon = pokemon);
+  }
   goBack(): void {
     this.location.back();
   }

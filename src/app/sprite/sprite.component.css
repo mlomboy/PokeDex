@@ -11,6 +11,12 @@ img {
     height: 70px;
 }
 
+
+.module:hover {
+  background-color: #eee;
+  cursor: pointer;
+  color: #607d8b;
+}
 /* .parent, .child1, .child2 {
     width: 100px;
     height: 100px;

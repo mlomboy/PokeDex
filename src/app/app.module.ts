@@ -11,7 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { PokemonDetailComponent } from './pokemon-detail/pokemon-detail.component';
 import { SpriteComponent } from './sprite/sprite.component';
 import { NgxPaginationModule } from 'ngx-pagination';
-
+import { PagerService } from './pager.service'
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +29,9 @@ import { NgxPaginationModule } from 'ngx-pagination';
     FormsModule,
     NgxPaginationModule
   ],
-  providers: [],
+  providers: [
+    PagerService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -18,7 +18,6 @@ export class SpriteComponent implements OnInit {
     this.pokemonService.getSprite(this.pokemonUrl)
     .subscribe(data => {
       this.pokemonSprite = data.sprites;
-      console.log(this.pokemonUrl)
     });
   }
 

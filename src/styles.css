@@ -3,6 +3,16 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+#pokedexLogo {
+    width: 150px;
+    height: 90px;
+    background-image: url('C:\Users\mlomboy\Desktop\PokeDex\src\assets\img\PokeDexLogo.png');
+    background-repeat: no-repeat;
+    background-size: 400px;
+    background-position-x: -120px;
+    background-position-y: 20px;
+    outline: 0;
+  }
 .bug {
     background: linear-gradient(180deg, #729f3f 50%, #729f3f 50%);
     background-color: #729f3f;
@@ -119,4 +129,28 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     width: 50%;
     padding: 3px;
     margin-left: 2px;
+}
+
+.module {
+    
+    padding: 10px;
+    text-align: center;
+    color: darkblue;
+    min-width: 120px;
+    background-color: rgba(135, 206, 235, 0.7);
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .background {
+    background-image: url('C:\Users\mlomboy\Desktop\PokeDex\src\assets\img\PokemonBackground.jpg');
+   /* Full height */
+   height: 100%; 
+
+   /* Center and scale the image nicely */
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+
 }

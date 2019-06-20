@@ -22,6 +22,7 @@ export class PokemonService {
     private messageService: MessageService ) { }
 
   private pokeUrl = 'https://pokeapi.co/api/v2/pokemon/';
+  private pokeSpeciesUrl = 'https://pokeapi.co/api/v2/pokemon-species/';
 
   private index : number;
   
@@ -33,8 +34,9 @@ export class PokemonService {
       );  
   }
 
+
+
   getSprite(name : string): Observable<Pokemon> {
-    console.log(this.http.get<Pokemon>(this.pokeUrl+name));
     return this.http.get<Pokemon>(this.pokeUrl+name);
   }
     /**
@@ -61,8 +63,9 @@ export class PokemonService {
       }
 
       searchPokemon(term: string): Observable<Pokemon[]> {
-        if (!term.trim()) {
+        if (!term) {
           // if not search term, return empty hero array.
+          console.log('here');
           return of([]);
          }
         return this.http.get<Pokemon[]>(`${this.pokeUrl}${term}`).pipe(
@@ -72,8 +75,15 @@ export class PokemonService {
       }
 
       getPokemon(name: string): Observable<Pokemon> {
-        
         const url = `${this.pokeUrl}${name}`;
+        return this.http.get<Pokemon>(url).pipe(
+          tap(_ => this.log(`fetched hero id=${name}`)),
+          catchError(this.handleError<Pokemon>(`getHero id=${name}`))
+        );
+      }
+
+      getPokemonSpecies(name: string): Observable<Pokemon> {
+        const url = `${this.pokeSpeciesUrl}${name}`;
         return this.http.get<Pokemon>(url).pipe(
           tap(_ => this.log(`fetched hero id=${name}`)),
           catchError(this.handleError<Pokemon>(`getHero id=${name}`))
