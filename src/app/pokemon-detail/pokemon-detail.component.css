@@ -70,6 +70,7 @@ body, html {
 .physical, .abilities {
   text-align: left;
   float: left;
+  margin-top: 20px;
 }
 
 .physical{
@@ -79,5 +80,7 @@ body, html {
 
 .abilities {
   position: relative;
-  left: 35%;
+  /* left: 35%; */
+  margin-left: 100px;
+  text-transform: capitalize;
 }

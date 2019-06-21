@@ -129,6 +129,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     width: 50%;
     padding: 3px;
     margin-left: 2px;
+    
 }
 
 .module {
@@ -141,6 +142,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     border-radius: 2px;
     position: relative;
     overflow: hidden;
+
   }
 
   .background {
@@ -150,7 +152,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
    /* Center and scale the image nicely */
    background-position: center;
-   background-repeat: no-repeat;
+   /* background-repeat: repeat-y; */
    background-size: cover;
 
 }

@@ -12,8 +12,14 @@ export interface Pokemon {
   }
 export interface PokemonSpecies {
   slot : string;
-  
+  flavor_text : string;
+  language : PokeLanguage[];
 }
+
+export interface PokeLanguage {
+  name : string;
+}
+
 export interface Sprite {
   front_default : string;
 }

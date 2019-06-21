@@ -1,17 +1,19 @@
 <div class="background">
   <div id="pokedexLogo" routerLink="/pokemon"></div>
 
-  <!-- <div class="container">
-      <div class="text-center"> -->
+
           <!-- items being paged -->
           <div class="grid grid-pad">
-              <a *ngFor="let item of pokemon.results" class="col-1-4"
+              <a *ngFor="let item of pokemon.results"  class="col-1-4"
                   routerLink="/pokemon-detail/{{item.name}}">
                   <app-sprite [pokeUrl] = 'item.name'>
                   </app-sprite>
               </a>
             </div>
-  
+
+
+            <!-- <div class="container">
+                <div class="text-center"> -->
           <!-- pager -->
           <!-- <ul *ngIf="pager.pages && pager.pages.length" class="pagination">
               <li [ngClass]="{disabled:pager.currentPage === 1}">
@@ -30,8 +32,8 @@
                   <a (click)="setPage(pager.totalPages)">Last</a>
               </li>
           </ul>
-      </div> -->
-  <!-- </div> -->
+      </div>
+  </div> -->
 </div>
 
 

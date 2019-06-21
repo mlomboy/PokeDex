@@ -2,31 +2,40 @@
   <div id="pokedexLogo" routerLink="/pokemon"></div>
   <div *ngIf="pokemon">
     <div class="module hero">
-      <div class ="pokeDetails">
+      <div class="pokeDetails">
         <div class="mainDetail">
-            <img [src]='pokemon.sprites.front_default'>
-            <h2>#{{pokemon.id}} {{pokemon.name | uppercase}}</h2>
-            <ng-container *ngFor = 'let pokeType of pokemon.types.reverse()'>
-              <span class = 'typeBorder {{pokeType.type.name}}'>{{pokeType.type.name}}</span>
-            </ng-container>
+          <img [src]='pokemon.sprites.front_default'>
+          <h2>#{{pokemon.id}} {{pokemon.name | uppercase}}</h2>
+          <ng-container *ngFor='let pokeType of pokemon.types.reverse()'>
+            <span class='typeBorder {{pokeType.type.name}}'>{{pokeType.type.name}}</span>
+          </ng-container>
         </div>
 
-      <div class="physical">
-        <h4> Physical Stats : </h4>
+        <div class="physical">
+          <h4> Physical Stats : </h4>
           <h5>Height : {{pokemon.height}} </h5>
           <h5>Weight : {{pokemon.weight}}</h5>
-      </div>
-      <div class="abilities">
+        </div>
+        <div class="abilities">
           <h4> Abilites : </h4>
-          <ng-container *ngFor = 'let pokeAbility of pokemon.abilities.reverse()'>
-             <h5>
-                {{pokeAbility.ability.name}}
-             </h5> 
-            </ng-container>
-      </div>
-      </div>
+          <ng-container *ngFor='let pokeAbility of pokemon.abilities.reverse()'>
+            <h5>
+              {{pokeAbility.ability.name}}
+            </h5>
+          </ng-container>
+        </div>
+        <!-- <div class="flavor_text">
+          <h4>Description</h4> -->
+          <!-- <ng-container *ngFor = 'let pokeFlavorText of pokemon.flavor_text_entries'>
+            <div *ngIf="pokeFlavorText.flavor_text_entries.language.name == 'en'">
+              {{pokeFlavorText.flavor_text_entries.flavor_text}}
+
+            </div>
+          </ng-container> -->
+    
+      <!-- </div> -->
     </div>
 
 
-</div>
+  </div>
 </div>

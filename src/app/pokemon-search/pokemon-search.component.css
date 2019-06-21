@@ -12,11 +12,12 @@
 #pokeSearch{    
     width: 150px;
     height: 10px;
-    background-position-x: 80px;
+    background-position-x: 70px;
+    background-position-y: 8px;
     display: table-cell;
     background-image: url('C:\Users\mlomboy\Desktop\PokeDex\src\assets\img\SearchLogo.png');
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 70px;
     }
 .wrapper1{
     width: 100%;
